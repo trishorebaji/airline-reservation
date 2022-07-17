@@ -1,1 +1,25 @@
-<p>sddfb</p>
+<div class="sign-up-section">
+
+    <div class="signup">
+        <h1 class="title">Login</h1>
+    <div class="text-field-section">
+        <p class="text">Email</p>
+        <input [ngModel]="email" (ngModelChange)="modelChangeEmail($event)" class="input-element" />
+    </div>
+
+    <div class="text-field-section">
+        <p class="text">Password</p>
+        <input [ngModel]="password" (ngModelChange)="modelChangePassword($event)" type="password" class="input-element"/>
+    </div>
+    
+   
+    <div class="sign-up-button-section"> 
+        <button (click)="handleClickLogin()" class="sign-up-button">Login</button>
+    </div>
+    <div class="already-section">
+        <span class="account-text">Don't have an account?</span>
+        <span (click)="signUp()" class="login-text">signup</span>
+    </div>
+</div>
+
+</div>

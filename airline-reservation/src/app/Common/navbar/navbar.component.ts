@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+  @Input() isTypeOfPage: string | undefined
+  @Input() type = 'land'
+ 
   constructor(public router: Router) { }
 
   ngOnInit(): void {
