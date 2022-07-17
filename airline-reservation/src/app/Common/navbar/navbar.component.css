@@ -1,0 +1,21 @@
+.navbar-section {
+    background-color: rgb(179, 162, 162);
+    height: 50px;
+    padding-left:10px ;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo-img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+.nav-right {
+    display: flex;
+    color: rgb(14, 14, 168);
+    cursor: pointer;
+}
+.nav-login {
+    margin-right: 10px;
+}

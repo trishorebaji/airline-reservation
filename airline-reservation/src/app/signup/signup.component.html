@@ -1,0 +1,29 @@
+<div class="sign-up-section">
+    <div class="signup">
+        <h1 class="title">Signup</h1>
+    <p>
+        <span class="text">FirstName</span>
+        <input [ngModel]="firstName" (ngModelChange)="modelChangeFn($event)">
+    </p>
+    <p>
+        <span class="text">LastName</span>
+        <input [ngModel]="lastName" (ngModelChange)="modelChangeFn($event)">
+    </p>
+    <p>
+        <span class="text">Email</span>
+        <input [ngModel]="email" (ngModelChange)="modelChangeFn($event)">
+    </p>
+    <p>
+        <span class="text">Password</span>
+        <input [ngModel]="password" (ngModelChange)="modelChangeFn($event)">
+    </p>
+    <p>
+        <span class="text">ConfirmPassword</span>
+        <input [ngModel]="confirmPassword" (ngModelChange)="modelChangeFn($event)">
+    </p>
+   
+    
+    <button (click)="handleClickSubmit()">Signup</button>
+</div>
+
+</div>
