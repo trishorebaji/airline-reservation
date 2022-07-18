@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginserviceService } from '../loginservice.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   email = '';
   password ='';
-  constructor(public router: Router) { }
+  constructor(public router: Router,private loginService:LoginserviceService) { }
 
   ngOnInit(): void {
   }
@@ -18,8 +19,19 @@ export class LoginComponent implements OnInit {
 
   }
   handleClickLogin(){
-    alert(this.email)
-    alert(this.password)
+    if(this.email!=="" && this.password!==""){
+      let res = this.loginService.loginService({email:this.email,password:this.password})
+      if(res){
+        this.router.navigate(["user-dashboard"])
+      }
+      else {
+        alert('login details incorrect')
+      }
+      
+    }else{
+      alert("please enter logim details")
+    }
+
   }
   modelChangeEmail(event:any) {
     this.email = event;

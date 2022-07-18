@@ -1,0 +1,14 @@
+<div class="user-dashboard-section">
+    <app-navbar isTypeOfPage=""></app-navbar>
+    <div class="serch-section">
+        <span class="serch-text">Source</span>
+        <input [ngModel]="source" (ngModelChange)="modelChangeSource($event)" class="serch-city" placeholder="enter source city..."/>
+        <span class="serch-text"> Destination</span>
+        <input [ngModel]="destination" (ngModelChange)="modelChangeDestination($event)" class="serch-city" placeholder="enter destination city..."/>
+        <input [ngModel]="date" (ngModelChange)="modelChangeDate($event)" type="date" class="date" />
+        <button class="search-button" (click)="handleClickSearch()">Search</button>
+    </div>
+    <div class="user-dashboard-empty-message">
+            <h1 class="welcome-title">Welcome to STG airlines</h1>
+     </div>
+</div>
