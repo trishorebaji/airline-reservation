@@ -10,7 +10,10 @@ import { SignupComponent } from './signup/signup.component';
 import { InputComponent } from './Common/input/input.component';
 import { FormsModule } from '@angular/forms';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-
+import {HttpClient, HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
+import { BookTicketComponent } from './book-ticket/book-ticket.component';
+//import { HttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +22,16 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     LoginComponent,
     SignupComponent,
     InputComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    BookTicketComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,35 +1,36 @@
+<app-navbar></app-navbar>
 <div class="sign-up-section">
 
     <div class="signup">
         <h1 class="title">Signup</h1>
-    <div class="text-field-section">
-        <p class="text">FirstName</p>
-        <input [ngModel]="firstName" (ngModelChange)="modelChangeFn($event)" class="input-element" />
+        <div class="text-field-section">
+            <p class="text">FirstName</p>
+            <input [ngModel]="firstName" (ngModelChange)="modelChangeFn($event)" class="input-element" />
+        </div>
+        <div class="text-field-section">
+            <p class="text">LastName</p>
+            <input [ngModel]="lastName" (ngModelChange)="modelChangeFn($event)" class="input-element"/>
+        </div>
+        <div class="text-field-section">
+            <p class="text">Email</p>
+            <input [ngModel]="email" (ngModelChange)="modelChangeFn($event)" class="input-element"/>
+        </div>
+        <div class="text-field-section">
+            <p class="text">Password</p>
+            <input [ngModel]="password" (ngModelChange)="modelChangeFn($event)" type="password" class="input-element"/>
+        </div>
+        <div class="text-field-section">
+            <p class="text">ConfirmPassword</p>
+            <input [ngModel]="confirmPassword" (ngModelChange)="modelChangeFn($event)" type="password" class="input-element"/>
+        </div>
+    
+        <div class="sign-up-button-section"> 
+            <button (click)="handleClickSubmit()" class="sign-up-button">Signup</button>
+        </div>
+        <div class="already-section">
+            <span class="account-text">Already have an account?</span>
+            <span (click)="login()" class="login-text">login</span>
+        </div>
     </div>
-    <div class="text-field-section">
-        <p class="text">LastName</p>
-        <input [ngModel]="lastName" (ngModelChange)="modelChangeFn($event)" class="input-element"/>
-    </div>
-    <div class="text-field-section">
-        <p class="text">Email</p>
-        <input [ngModel]="email" (ngModelChange)="modelChangeFn($event)" class="input-element"/>
-    </div>
-    <div class="text-field-section">
-        <p class="text">Password</p>
-        <input [ngModel]="password" (ngModelChange)="modelChangeFn($event)" type="password" class="input-element"/>
-    </div>
-    <div class="text-field-section">
-        <p class="text">ConfirmPassword</p>
-        <input [ngModel]="confirmPassword" (ngModelChange)="modelChangeFn($event)" type="password" class="input-element"/>
-    </div>
-   
-    <div class="sign-up-button-section"> 
-        <button (click)="handleClickSubmit()" class="sign-up-button">Signup</button>
-    </div>
-    <div class="already-section">
-        <span class="account-text">Already have an account?</span>
-        <span (click)="login()" class="login-text">login</span>
-    </div>
-</div>
 
 </div>

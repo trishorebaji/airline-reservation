@@ -1,5 +1,5 @@
 .navbar-section {
-    background-color: rgb(179, 162, 162);
+    background-color: #4860e6;
     height: 50px;
     padding-left:10px ;
     padding: 10px;
@@ -9,11 +9,12 @@
 .logo-img {
     width: 50px;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .nav-right {
     display: flex;
-    color: rgb(14, 14, 168);
+    color: rgb(238, 238, 248);
     cursor: pointer;
 }
 .nav-login {

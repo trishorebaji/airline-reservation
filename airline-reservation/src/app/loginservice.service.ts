@@ -6,9 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginserviceService {
 
-  constructor(private _http: HttpClient) { }
-
-  loginService(data:any){
-    return this._http.post('',data)
+  url="http://localhost:9090/userDetails/read"
+  constructor(private http: HttpClient) { }
+  getLoginDetails(){
+    return this.http.get(this.url)
+  
   }
 }

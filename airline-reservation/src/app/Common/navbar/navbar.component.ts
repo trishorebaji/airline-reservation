@@ -8,11 +8,16 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   @Input() isTypeOfPage: string | undefined
-  @Input() type = 'land'
- 
+  type = 'land'
+  log='Out'
+  currentUser:any;
+  @Input() userCheck: string| undefined
+  userType="work"
   constructor(public router: Router) { }
-
+  
   ngOnInit(): void {
+    const user:any = localStorage.getItem('currentUser');
+    this.currentUser=JSON.parse(user);
   }
 
   login(){
